@@ -139,14 +139,19 @@ main .menu-btn .bar3 {
   border-bottom: 2px solid #008cff;
   padding-top: 2px;
   height: calc(100% + 2px);
+  color: white;
 }
-.overlay nav {
+.overlay #contents {
+  border-bottom: 1px solid grey;
+  padding-bottom: 20px;
+}
+.overlay #contents #solutions {
   width: 100%;
   height: auto;
   padding-bottom: 80px;
-  border-bottom: 1px solid grey;
+  display: none;
 }
-.overlay nav .grid-container {
+.overlay #contents #solutions .grid-container {
   display: grid;
   grid-template-columns: auto auto;
   width: 650px;
@@ -156,25 +161,46 @@ main .menu-btn .bar3 {
   -moz-column-gap: 50px;
   column-gap: 50px;
 }
-.overlay nav .grid-container .grid-item {
+.overlay #contents #solutions .grid-container .grid-item {
   color: white;
-  padding: 10px;
   font-size: 20px;
   text-align: left;
+  height: auto;
+  padding-bottom: 20px;
 }
-.overlay nav .grid-container .grid-item #sub-text {
+.overlay #contents #solutions .grid-container .grid-item p {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0px;
+  font-weight: bold;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+.overlay #contents #solutions .grid-container .grid-item p:hover {
+  color: grey;
+}
+.overlay #contents #solutions .grid-container .grid-item span {
   font-size: 16px;
-  opacity: 0.7;
+  display: block;
+  margin-top: -5px;
 }
-.overlay nav .grid-container #item2 {
+.overlay #contents #solutions .grid-container #item2 {
   font-size: 12px;
   opacity: 0.7;
 }
-.overlay nav .grid-container #item1 {
+.overlay #contents #solutions .grid-container #item1 {
   font-size: 25px;
 }
-.overlay nav .grid-container #item5,
-.overlay nav .grid-container #item6 {
+.overlay #contents #solutions .grid-container #item5,
+.overlay #contents #solutions .grid-container #item6 {
   grid-column-start: 2;
   grid-column-end: 2;
 }
