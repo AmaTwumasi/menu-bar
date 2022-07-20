@@ -1,94 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="src/css/style.css" />
-    <title>Menu bar</title>
-  </head>
-  <body>
-    <!-- The overlay -->
-    <div id="myNav" class="overlay">
-      <!-- Button to close the overlay navigation -->
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-        >&times;</a
-      >
-      <header>
-        <nav>
-          <div>
-            <!-- Overlay content -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="src/css/style.css" />
+		<title>Menu bar</title>
+	</head>
+	<body>
+		<!-- The overlay -->
+		<div id="myNav" class="overlay">
+			<!-- Button to close the overlay navigation -->
+			<div class="top">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+					>&times;</a
+				>
+			</div>
+			<header>
+				<!-- Overlay content -->
+				<div class="header_element active">
+					<a href="#">Solutions</a>
+				</div>
 
-            
-              <p>
-                <a href="#">Solutions</a>
-              </p>
-              <p>
-                <a href="#">Customers</a>
-              </p>
-              <p>
-                <a href="#">Resources</a>
-              </p>
-              <p>
-                <a href="#">About Us</a>
-              </p>
-            <hr id="line1" />
-          </div>
-          <div class="grid-container">
-            <div class="grid-item" id="item1">Solutions</div>
-            <div class="grid-item" id="item2">USE CASES</div>
-            <div class="grid-item" id="item3">
-              Move, manage and tokenize value with Ripple's crypto and
-              blockchain solutions.
-            </div>
-            <div class="grid-item" id="item4">
-              Cross-Border Payments
-              <br />
-              <span id="sub-text">Enable global money transfers</span>
-            </div>
-            <div class="grid-item" id="item5">
-              Crypto Liquidity
-              <br />
-              <span id="sub-text"> Source digital assets</span>
-            </div>
-            <div class="grid-item" id="item6">
-              Central Bank DigitalCurrency
-              <br />
-              <span id="sub-text"> Implement CBDCs</span>
-            </div>
-          </div>
-        </nav>
-      </header>
-      <hr id="line2" />
-      <button>Contact Sales ></button>
-    </div>
-    <!-- Use any element to open/show the overlay navigation menu -->
-    <span onclick="openNav()" class="menu-btn">
-      
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      
-    </span>
+				<div class="header_element">
+					<a href="#">Customers</a>
+				</div>
 
-    <script>
-      
+				<div class="header_element">
+					<a href="#">Resources</a>
+				</div>
+				<div class="header_element">
+					<a href="#">About Us</a>
+				</div>
+			</header>
+			<section id="contents">
+				<article id="solutions">
+					<div class="grid-container">
+						<div class="grid-item" id="item1">Solutions</div>
+						<div class="grid-item" id="item2">USE CASES</div>
+						<div class="grid-item" id="item3">
+							Move, manage and tokenize value with Ripple's crypto and
+							blockchain solutions.
+						</div>
+						<div class="grid-item" id="item4">
+							<p class="top">Cross-Border Payments</p>
+							<span id="sub-text">Enable global money transfers</span>
+						</div>
+						<div class="grid-item" id="item5">
+							<p class="top">Crypto Liquidity</p>
+							<span id="sub-text"> Source digital assets</span>
+						</div>
+						<div class="grid-item" id="item6">
+							<p class="top">Central Bank DigitalCurrency</p>
+							<span id="sub-text"> Implement CBDCs</span>
+						</div>
+					</div>
+				</article>
+				<article id="customers"></article>
+			</section>
 
-      /* Open when someone clicks on the span element */
-      function openNav() {
-        document.getElementById("myNav").style.height = "100%";
-      }
+			<button>Contact Sales ></button>
+		</div>
+		<!-- Use any element to open/show the overlay navigation menu -->
+		<main>
+			<span onclick="openNav()" class="menu-btn">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</span>
+		</main>
 
-      /* Close when someone clicks on the "x" symbol inside the overlay */
-      function closeNav() {
-        document.getElementById("myNav").style.height = "0%";
-      }
-    </script>
-  </body>
+		<script>
+			/* Open when someone clicks on the span element */
+			function openNav() {
+				document.getElementById("myNav").style.height = "100vh";
+			}
+
+			/* Close when someone clicks on the "x" symbol inside the overlay */
+			function closeNav() {
+				document.getElementById("myNav").style.height = "0vh";
+			}
+		</script>
+	</body>
 </html>
