@@ -20,125 +20,74 @@
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
         >&times;</a
       >
+      <header>
+        <nav>
+          <div>
+            <!-- Overlay content -->
 
-      <!-- Overlay content -->
-      <nav>
-        <ul>
-          <li>
-            <a href="#nowhere" class="overlay-content">Solutions</a>
-            <ul>
-              <li><a href="#">Solutions</a></li>
-              <li>
-                <a href="#"
-                  >Move, manage and tokenize value with Ripple's crypto and
-                  blockchain solutions.</a
-                >
-              </li>
-              <li><a href="#">USE CASES</a></li>
-              <li>
-                <a href="#"
-                  >Cross-Border Payments Enable global money transfers</a
-                >
-              </li>
-              <li><a href="#">Crypto Liquidity Source digital assets</a></li>
-              <li>
-                <a href="#">Central Bank Digital Currency Implement CBDCs</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" class="overlay-content">Customers</a>
-            <ul>
-              <li><a href="#">Customers</a></li>
-              <li>
-                <a href="#">Read stories from our global customer base.</a>
-              </li>
-              <li><a href="#">MEET OUR CUSTOMERS</a></li>
-              <li>
-                <a href="#">Customer Overview Explore Ripple customers</a>
-              </li>
-              <li>
-                <a href="#">Customer Case Studies Read customer testimonials</a>
-              </li>
-              <li><a href="#">FEATURED CASE STUDIES</a></li>
-              <li>
-                <a href="#">Siam Commercial Bank Enabling better payouts</a>
-              </li>
-              <li><a href="#">Nium Eliminating prefunding</a></li>
-             <li><a href="#"></a> MoneyMatch Offering lower-cost remittances</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#nowhere" class="overlay-content">Resources</a>
-            <ul>
-              <li><a href="#">Resources</a></li>
-              <li><a href="#">Dive into crypto with the latest thought leadership, industry events and more.</a></li>
-              <li><a href="#">EDUCATION & LEARNING</a></li>
-              <li><a href="#">Blog
-Ripple Insights</a></li>
-               <li><a href="#">Content Library
-Whitepapers, videos and more</a></li>
-              <li><a href="#">Events
-Virtual and in-person engagements</a></li>
-              <li><a href="#">Learn about XRP
-Sustainable cryptocurrency</a></li>
-              <li><a href="#">SUPPORT</a></li>
-               <li><a href="#">FAQs
-Frequently asked questions</a></li>
-              <li><a href="#">Developer Resources
-Build on the XRP Ledger</a></li>
-              <li><a href="#">Public Policy
-Regulatory updates</a></li>
-              <li><a href="#">Get in Touch
-Contact press or sales</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" class="overlay-content">About Us</a>
-            <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Learn how we're transforming global finance</a></li>
-              <li><a href="#">WHO WE ARE</a></li>
-              <li><a href="#">Edifícios</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Residenciais</a></li>
-              <li><a href="#">Institucionais</a></li>
-              <li><a href="#">Edifícios</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Residenciais</a></li>
-              <li><a href="#">Institucionais</a></li>
-              <li><a href="#">Edifícios</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-      <hr id="line1" />
+            
+              <p>
+                <a href="#">Solutions</a>
+              </p>
+              <p>
+                <a href="#">Customers</a>
+              </p>
+              <p>
+                <a href="#">Resources</a>
+              </p>
+              <p>
+                <a href="#">About Us</a>
+              </p>
+            <hr id="line1" />
+          </div>
+          <div class="grid-container">
+            <div class="grid-item" id="item1">Solutions</div>
+            <div class="grid-item" id="item2">USE CASES</div>
+            <div class="grid-item" id="item3">
+              Move, manage and tokenize value with Ripple's crypto and
+              blockchain solutions.
+            </div>
+            <div class="grid-item" id="item4">
+              Cross-Border Payments
+              <br />
+              <span id="sub-text">Enable global money transfers</span>
+            </div>
+            <div class="grid-item" id="item5">
+              Crypto Liquidity
+              <br />
+              <span id="sub-text"> Source digital assets</span>
+            </div>
+            <div class="grid-item" id="item6">
+              Central Bank DigitalCurrency
+              <br />
+              <span id="sub-text"> Implement CBDCs</span>
+            </div>
+          </div>
+        </nav>
+      </header>
       <hr id="line2" />
       <button>Contact Sales ></button>
     </div>
-
     <!-- Use any element to open/show the overlay navigation menu -->
-    <span onclick="openNav()">
-      <div class="container" onclick="myFunction(this)">
+    <span onclick="openNav()" class="menu-btn">
+      
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
-      </div>
+      
     </span>
 
     <script>
-      function myFunction(x) {
-        x.classList.toggle("change");
-      }
+      
 
       /* Open when someone clicks on the span element */
       function openNav() {
-        document.getElementById("myNav").style.width = "100%";
+        document.getElementById("myNav").style.height = "100%";
       }
 
       /* Close when someone clicks on the "x" symbol inside the overlay */
       function closeNav() {
-        document.getElementById("myNav").style.width = "0%";
+        document.getElementById("myNav").style.height = "0%";
       }
     </script>
   </body>

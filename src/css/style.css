@@ -1,6 +1,11 @@
+body {
+  background: black;
+  color: white;
+}
+
 .overlay {
-  height: 100%;
-  width: 0;
+  height: 0%;
+  width: 100%;
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
@@ -11,49 +16,73 @@
   transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
-ul a + ul {
-  padding: 0px;
-  list-style: none;
-  text-align: center;
-  max-height: 0;
-  overflow: hidden;
-  transition: 0.5s linear;
-}
-
-ul a:focus + ul {
-  max-height: 30em;
+p a:focus + p {
   padding: 0px;
   list-style: none;
   text-align: center;
 }
 
-li {
+p {
   display: inline-block;
-  margin: 0px 15px;
+  margin: 0px 5px;
+  text-align: center;
 }
 
 /* Position the content inside the overlay */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 650px;
+  margin-left: 100px;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+.grid-container .grid-item {
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  text-align: left;
+}
+.grid-container .grid-item #sub-text {
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+#item2 {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+#item1 {
+  font-size: 25px;
+}
+
+#item5,
+#item6 {
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
 .overlay-content {
-  display: flex;
-  justify-content: center;
-  align-items: center; /* 25% from the top */
+  position: relative;
+  top: 25%; /* 25% from the top */
   width: 100%; /* 100% width */
   text-align: center; /* Centered text/links */
-  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
-  text-align: center;
-  display: inline-block;
-  margin: 0px 15px;
+  margin-top: 30px;
 }
 
 /* The navigation links inside the overlay */
 .overlay a {
-  margin: 40px;
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 40px;
+  margin-left: 150px;
   border: 10px;
   padding: 8px;
   text-decoration: none;
   font-size: 20px;
   color: #818181;
-  display: block; /* Display block instead of inline */
+  display: inline-block; /* Display block instead of inline */
   transition: 0.3s; /* Transition effects on hover (color) */
 }
 
@@ -66,15 +95,17 @@ li {
 /* Position the close button (top right corner) */
 .overlay .closebtn {
   position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
+  top: -60px;
+  left: 500px;
+  font-size: 40px;
+  margin-top: 60px;
+  color: white;
 }
 
 #line1 {
   position: relative;
   top: -50px;
-  left: 80px;
+  left: 95px;
   color: white;
   opacity: 0.2;
   max-width: 1180px;
@@ -82,8 +113,8 @@ li {
 
 #line2 {
   position: relative;
-  top: 490px;
-  left: 80px;
+  top: 30px;
+  left: 95px;
   color: white;
   opacity: 0.2;
   max-width: 1180px;
@@ -91,7 +122,7 @@ li {
 
 button {
   position: relative;
-  top: 500px;
+  top: 40px;
   left: 600px;
   color: white;
   background-image: linear-gradient(to right, #6185d3, #035dd1, #6396c0);
@@ -102,17 +133,22 @@ button {
   padding: 10px 20px;
 }
 
-.container {
+.menu-btn {
   display: inline-block;
+  position: absolute;
+  top: -38px;
+  left: 658px;
+  margin-top: 60px;
   cursor: pointer;
 }
 
 .bar1,
 .bar2,
 .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #333;
+  size: 5px;
+  width: 20px;
+  height: 2px;
+  background-color: white;
   margin: 6px 0;
   transition: 0.4s;
 }
@@ -135,10 +171,12 @@ button {
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
   .overlay a {
+    padding: 8px;
+    text-decoration: none;
     font-size: 20px;
-    position: absolute;
-    top: 10px;
-    right: 5px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s;
   }
   .overlay .closebtn {
     font-size: 40px;
