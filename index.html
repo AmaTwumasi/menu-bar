@@ -17,29 +17,30 @@
     <!-- The overlay -->
     <div id="myNav" class="overlay">
       <!-- Button to close the overlay navigation -->
-     <div class="top"> <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-        >&times;</a>
-</div>
+      <div class="top">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+      </div>
       <header>
-        <nav>
-          <div>
-            <!-- Overlay content -->
+        <!-- Overlay content -->
+        <div class="header_element active">
+          <a href="#">Solutions</a>
+        </div>
 
-            
-              <p>
-                <a href="#">Solutions</a>
-              </p>
-              <p>
-                <a href="#">Customers</a>
-              </p>
-              <p>
-                <a href="#">Resources</a>
-              </p>
-              <p>
-                <a href="#">About Us</a>
-              </p>
-            <hr id="line1" />
-          </div>
+        <div class="header_element">
+          <a href="#">Customers</a>
+        </div>
+
+        <div class="header_element">
+          <a href="#">Resources</a>
+        </div>
+        <div class="header_element">
+          <a href="#">About Us</a>
+        </div>
+      </header>
+      <section id="contents">
+        <article id="solutions">
           <div class="grid-container">
             <div class="grid-item" id="item1">Solutions</div>
             <div class="grid-item" id="item2">USE CASES</div>
@@ -48,46 +49,43 @@
               blockchain solutions.
             </div>
             <div class="grid-item" id="item4">
-              Cross-Border Payments
-              <br />
+              <p class="top">Cross-Border Payments</p>
               <span id="sub-text">Enable global money transfers</span>
             </div>
             <div class="grid-item" id="item5">
-              Crypto Liquidity
-              <br />
+              <p class="top">Crypto Liquidity</p>
               <span id="sub-text"> Source digital assets</span>
             </div>
             <div class="grid-item" id="item6">
-              Central Bank DigitalCurrency
-              <br />
+              <p class="top">Central Bank DigitalCurrency</p>
               <span id="sub-text"> Implement CBDCs</span>
             </div>
           </div>
-        </nav>
-      </header>
-      <hr id="line2" />
+        </article>
+        <article id="customers">
+        </article>
+      </section>
+
       <button>Contact Sales ></button>
     </div>
     <!-- Use any element to open/show the overlay navigation menu -->
-    <span onclick="openNav()" class="menu-btn">
-      
+    <main>
+      <span onclick="openNav()" class="menu-btn">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
-      
-    </span>
+      </span>
+    </main>
 
     <script>
-      
-
       /* Open when someone clicks on the span element */
       function openNav() {
-        document.getElementById("myNav").style.height = "100%";
+        document.getElementById("myNav").style.height = "100vh";
       }
 
       /* Close when someone clicks on the "x" symbol inside the overlay */
       function closeNav() {
-        document.getElementById("myNav").style.height = "0%";
+        document.getElementById("myNav").style.height = "0vh";
       }
     </script>
   </body>
